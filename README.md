@@ -223,125 +223,125 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 您可以使用它向虚拟机发送命令。默认使用`stty`，这在大多数Linux上都适用。
 
-## Input
+## 输入
 
-### Legacy Mode
+### 旧版模式
 
-When enabled, a PS/2 mouse and keyboard will be used. Otherwise a USB mouse and keyboard will be used. Legacy mode does not support emulated USB tablet device (used by "touch mode" or "tablet mode").
+启用后，将使用PS/2鼠标和键盘。否则，将使用USB鼠标和键盘。传统模式不支持仿真的USB平板电脑设备（由“触摸模式”或“平板电脑模式”使用）。
 
-### Invert Mouse Scroll
+### 反转鼠标滚动
 
-When enabled, an external mouse or trackpad scroll event will be inverted.
+启用后，外部鼠标或触控板滚动操作将反转。
 
-### Gesture and Cursor Settings
+### 更多图形和光标设置
 
-Goes to the Settings screen.
+转到“设置”。
 
-## Networking
+## 网络
 
-You can enable/disable networking and select the network card to emulate.
+您可以启用/禁用联网并选择要模拟的网卡。
 
-### Isolate Guest
+### 隔离访客
 
-This option makes it so the guest cannot see the host network at all.
+使用此选项可以使访客完全看不到主机网络。
 
-### Advanced Configuration
+### 高级配置
 
-These options let you configure the virtual guest network. UTM uses QEMU's slirp usermode networking driver.
+这些选项使您可以配置虚拟访客网络。UTM使用QEMU的slirp用户模式网络驱动程序。
 
-### Port Forwarding
+### 端口转发
 
-You can forward guest ports to host ports. For example, if you have an HTTP server running on the VM's port 80 and you forward host TCP port 8080 to guest TCP port 80 then you can access "http://localhost:8080/" from Safari to communicate with the HTTP server. If host/guest addresses are not specified, then all host interfaces will be binded to and all guests will be forwarded.
+您可以将来宾端口转发到主机端口。例如，如果在虚拟机的端口80上运行HTTP服务器，并将主机TCP端口8080转发到来宾TCP端口80，则可以从Safari访问`http//localhost:8080/`以与HTTP服务器通信。如果未指定主机/来宾地址，则将绑定所有主机接口，并将所有转发。
 
-## Sound
+## 声音
 
-You can enable/disable sound and select the sound card to emulate. Does not work in Console mode.
+您可以启用/禁用声音并选择要模拟的声卡。在控制台模式下不起作用。
 
-## Sharing
+## 共享
 
-### Clipboard Sharing
+### 剪贴板共享
 
-Requires [SPICE guest agent tools](https://www.spice-space.org/download.html). This will synchronize the VM's clipboard with the device's clipboard. The synchronization happens whenever you copy something inside the VM or if you task switch (UTM to the foreground) on the host.
+需要[SPICE访客代理工具](https://www.spice-space.org/download.html)。这将使虚拟机的剪贴板与设备的剪贴板同步。每当您在虚拟机内复制内容或在主机上执行任务切换（将UTM切换到前台）时，就会发生同步。
 
-### Shared Directory
+### 目录共享
 
-Requires [SPICE WebDAV service](https://www.spice-space.org/download.html). Note that Windows XP support by SPICE is not perfect and Windows 7 is recommended for working WebDAV. You can share any directory inside UTM's `Documents` directory except any `.utm` package.
+需要[SPICE WebDAV 服务](https://www.spice-space.org/download.html)。请注意，`SPICE`对`Windows XP`的支持并不完美，建议使用`Windows 7`来运行`WebDAV`。您可以共享UTM的`Documents`目录中的任何目录，但不包括任何`.utm`包。
 
-# Virtual Machine
+# 虚拟机
 
-## Toolbar options
+## 工具栏
 
-From left to right:
+从左至右:
 
-* **Power**: sends a power button event to the VM. Once this is pressed, the button changes to an X which allows you to force quit UTM. Note the power and X button are the only safe way of exiting UTM. If you quit UTM any other way (including swiping up from the app switcher), an iOS bug will prevent you from launching UTM again until you reboot.
-* **Pause**: suspends the VM and makes a snapshot (if supported). This button becomes a Play button after Pause completes and can resume the VM (and delete the snapshot).
-* **Restart**: sends a reset button event to the VM.
-* **Zoom**: first press will attempt to zoom the display to fit. Second press will reset the display state (zoom out and centered).
-* **Keyboard**: shows or hides the keyboard. In console mode, the keyboard must be shown to type anything in the console.
-* **Settings**: not implemented
-* **Hide**: Hides the toolbar. To show again, use a **three finger downwards** gesture. If the keyboard is visible, you need to make the gesture twice.
+* **电源**: 向虚拟机发送电源按钮事件。按下此按钮后，该按钮将变为X，以使您可以强制退出UTM。请注意，电源和X按钮是退出UTM的唯一安全方法。如果您以其他任何方式退出UTM（包括从应用切换器中向上滑动），则iOS的Bug会阻止您再次启动UTM，直到重新启动为止。
+* **暂停**: 挂起虚拟机并制作快照（如果支持）。暂停完成后，此按钮变为“播放”按钮，可以恢复虚拟机（并删除快照）。
+* **重启**: 向虚拟机发送重启操作。
+* **缩放**: 第一次按将尝试缩放显示以适应。第二次按下将重置显示状态（缩小和居中）。
+* **键盘**: 显示或隐藏键盘。在控制台模式下，必须显示键盘才能在控制台中键入内容。
+* **设置**: 暂时不支持进行操作。
+* **隐藏**: 隐藏工具栏。要再次显示，请使用**三指向下**的手势。如果键盘是可见的，你需要做两次手势。
 
-## Gestures
+## 手势
 
-In Console mode, the only gestures available is Three Finger Swipe Up/Down.
+在控制台模式下，唯一可用的手势是三个手指向上/向下滑动。
 
-### Long press
+### 长按
 
-Configurable in Settings:
+可在设置中配置:
 
-* Disabled
-* Click & Hold (default)
-* Right Click
+* 无效
+* 点击&拖动 (默认)
+* 右键
 
-### Two Finger Tap
+### 双指点击
 
-Configurable in Settings:
+可在设置中配置:
 
-* Disabled
-* Right Click (default)
+* 无效
+* 右键 (默认)
 
-### Two Finger Pan
+### 双指平移
 
-Configurable in Settings:
+可在设置中配置:
 
-* Disabled
-* Move Screen (default)
-* Click & Hold (move cursor while clicking)
-* Mouse Wheel (only up and down)
+* 无效
+* 移动屏幕 (默认)
+* 点击&拖动 (单击时移动光标)
+* 鼠标滚轮 (只能上下滑动)
 
-### Two Finger Pinch
+### 二指内夹
 
-If Move Screen is selected for Two Finger Pan: zoom the screen.
+如果“双指平移”选择了“移动屏幕”：缩放屏幕。
 
-Otherwise: does nothing.
+否则：什么都不做。
 
-### Two Finger Swipe
+### 两指滑动
 
-Configurable in Settings:
+可在设置中配置:
 
-* Disabled (default)
-* Mouse Wheel (each swipe up or down is one event)
+* 无效 (默认)
+* 鼠标滚轮 (只能上下滑动)
 
-### Three Finger Pan
+### 三指点击
 
-Configurable in Settings:
+可在设置中配置:
 
-* Disabled (default)
-* Move Screen
-* Click & Hold (move cursor while clicking)
-* Mouse Wheel (only up and down)
+* 无效 (默认)
+* 移动屏幕
+* 点击&拖动 (单击时移动光标)
+* 鼠标滚轮 (只能上下滑动)
 
-### Three Finger Swipe Up
+### 三指上滑
 
-If toolbar is visible: hide the toolbar
+如果工具栏可见：隐藏工具栏
 
-If toolbar is not visible: show the keyboard
+如果工具栏不可见：显示键盘
 
-### Three Finger Swipe Down
+### 三指下滑
 
-If toolbar is visible: hide the keyboard
+如果工具栏可见：隐藏键盘
 
-If toolbar is not visible: show the toolbar
+如果工具栏不可见：显示工具栏
 
   [1]: https://github.com/utmapp/UTM/releases/latest
   [2]: https://dantheman827.github.io/ios-app-signer/
