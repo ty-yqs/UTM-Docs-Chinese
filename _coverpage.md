@@ -4,4 +4,4 @@
 
 - 开源作者：osy
 
-[参与文档制作](https://gitee.com/Ty-yqs/docs-for-utm/blob/master/README.md) [Get Started](#安装)
+[参与文档编写](https://github.com/ty-yqs/UTM-Docs-Chinese/blob/main/README.md) [开始](#安装)
