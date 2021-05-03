@@ -15,6 +15,19 @@ UTM能在iOS11+并且已越狱的设备上运行。 UTM也能通过 [Xcode][9] �
 
 **iOS14.0/14.1/14.4+**: UTM只会在越狱之后工作。
 
+### 使用UTM-SE
+
+此版本待官方公布，现在可以体验Ty编译的[预览版](https://share.weiyun.com/fmHJl8wa)。
+
+此版本的虚拟机会造成较大的性能损失，若你的设备满足UTM的安装要求，请不要使用此版本。
+
+## 越狱设备
+
+UTM需要AppSync Unified，可以在[Karen's Repo][8]上找到。您需要将这两个存储库添加到包管理器（Cydia、Sileo、Zebra等）以安装UTM。
+
+1. 为 AppSync Unified 添加 [https://cydia.akemi.ai/][8]。
+2. 为 UTM 添加 [https://cydia.getutm.app/][7]。
+
 ### AltStore 源
 
 提示: 此时，第三方回购需要AltStore的beta版本，该版本仅对开发者的Patreon支持者可用。从源安装时，可以从AltStore接收更新提示。
@@ -31,11 +44,35 @@ UTM能在iOS11+并且已越狱的设备上运行。 UTM也能通过 [Xcode][9] �
 2. 下载 [最新版本的IPA][1] 到你的设备
 3. 使用Altstore打开下载的IPA
 
-### 使用UTM-SE
+### 自签名安装
 
-此版本待官方公布，现在可以体验Ty编译的[预览版](https://share.weiyun.com/fmHJl8wa)。
+***此方法UTM-TCI版本可用，但UTM不建议***
 
-此版本的虚拟机会造成较大的性能损失，若你的设备满足UTM的安装要求，请不要使用此版本。
+#### Windows
+
+- 下载sideloadly
+- 手机连接电脑
+- 到电脑上安装SideloadlySetup.exe
+- 打开Sideloadly，把ipa包拉入
+- 在Apple account 中输入苹果ID账号
+- 再点击 Start 开始，再输入苹果ID密码
+- 再输入验证绑定，一旦绑定下次可直接安装
+- 等待几秒，手机就会出现APP图标了，意味着安装成功
+
+#### MacOS
+
+- 下载nullximpactor并解压
+- 将nullximpactor拖到应用程序，以后即可在启动台启动
+- 按下command+空格键
+- 搜索邮件，打开macos自带邮件应用
+- 按下command+, 打开邮件设置
+- 点击账户，添加一个用来给app签名的账户（可以新注册一个，必须是没有开两步验证的）
+- 添加完成后邮件app不要退出，保持开启状态
+- 打开nullximpactor
+- 将手机与电脑连接
+- 在devices里选择你的设备
+- 将你要安装的ipa拖动到IPA URL的框内
+- 点击install，弹出窗口，输入刚刚在邮件添加的appleid账号密码，即可安装
 
 ### 开发者签名安装(推荐)
 
@@ -67,13 +104,6 @@ UTM能在iOS11+并且已越狱的设备上运行。 UTM也能通过 [Xcode][9] �
 有许多云签名服务，包括AppCake，由于使用了错误的签名证书，**无法**让UTM工作。如果您在尝试启动VM时遇到崩溃或黑屏，很可能是您的签名证书无效。
 
 你可以通过 `设置 -> 通用 -> 设备&描述文件管理` 检查你的签名。 如果用于对UTM进行签名的证书列在“开发者应用程序”下，则它是有效的。如果它列在“企业应用程序”等其他项下，则它是无效的证书。
-
-## 越狱设备
-
-UTM需要AppSync Unified，可以在[Karen's Repo][8]上找到。您需要将这两个存储库添加到包管理器（Cydia、Sileo、Zebra等）以安装UTM。
-
-1. 为 AppSync Unified 添加 [https://cydia.akemi.ai/][8]。
-2. 为 UTM 添加 [https://cydia.getutm.app/][7]。
 
 # 快速开始
 
