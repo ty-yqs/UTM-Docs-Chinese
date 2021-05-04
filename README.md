@@ -429,8 +429,6 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 # 捐赠
 
-UTM中文文档是Ty秉持着公益的原则创建的，在服务器和域名费用上花了不少钱。
-
 ![Donate](https://docs.utmapp.asia/assets/27448722-4F06-4C67-B797-059F6CBE195B.png)
 
   [1]: https://github.com/utmapp/UTM/releases/latest
