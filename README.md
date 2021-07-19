@@ -199,7 +199,7 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 如果您不知道要使用多少RAM，请谨慎猜测，如果RAM太多，VM将拒绝启动，或者您将收到内存使用警告。
 
-![内存限制](https://docs.utmapp.asia/assets/0A3505DB-639A-4089-B92A-842109015F1B.jpeg)
+![内存限制](https://utmapp.wiki/assets/0A3505DB-639A-4089-B92A-842109015F1B.jpeg)
 
 ### CPU核心数
 
