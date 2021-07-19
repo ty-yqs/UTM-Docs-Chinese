@@ -427,10 +427,6 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 如果工具栏不可见：显示工具栏
 
-# 捐赠
-
-![Donate](https://docs.utmapp.asia/assets/27448722-4F06-4C67-B797-059F6CBE195B.png)
-
   [1]: https://github.com/utmapp/UTM/releases/latest
   [2]: https://dantheman827.github.io/ios-app-signer/
   [3]: https://discord.gg/UV2RUgD
