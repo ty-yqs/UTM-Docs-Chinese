@@ -1,6 +1,5 @@
 # 安装
 
- 本教程中原先的安装教程已过时，请前往此处查看
  -  [持续更新教程 - Zhang Blog ](https://zkxblog.xyz/archives/UTM-Ultimate-Installation-Guide.html)
 
 ## 相关视频教程
@@ -8,9 +7,6 @@
 
  - [使用Xcode引导UTM启动 - Ty](https://b23.tv/vv9cU6)
  - [使用Jitterbug运行UTM - Js](https://b23.tv/hWpqHQ)
-
-
-
 
 # 快速开始
 
@@ -334,6 +330,18 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 如果工具栏不可见：显示工具栏
 
+# 报错解决
+
+## QEMU 遇到错误退出: qemu-system: cannot set up guest memory '\*.ram': Cannot allocate memory
+
+这很可能由内存不足产生，尝试调小您的虚拟机内存
+
+## windows虚拟机蓝屏，信息如下图
+
+![BlueScreen](10)
+
+修改CPU类型为`Standard PC (i440FX + PIIX, 1996)(defult)(pc-i440fx-5.2)`
+
   [1]: https://github.com/utmapp/UTM/releases/latest
   [2]: https://dantheman827.github.io/ios-app-signer/
   [3]: https://discord.gg/UV2RUgD
@@ -343,3 +351,4 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
   [7]: cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.getutm.app/
   [8]: cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.akemi.ai/
   [9]: https://github.com/utmapp/UTM/blob/master/Documentation/TetheredLaunch.md
+  [10]: https://raw.githubusercontent.com/ty-yqs/UTM-Docs-Chinese/main/assets/BlueScreen1.jpeg
