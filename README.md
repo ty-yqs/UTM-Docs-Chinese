@@ -351,4 +351,4 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
   [7]: cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.getutm.app/
   [8]: cydia://url/https://cydia.saurik.com/api/share#?source=https://cydia.akemi.ai/
   [9]: https://github.com/utmapp/UTM/blob/master/Documentation/TetheredLaunch.md
-  [10]: https://raw.githubusercontent.com/ty-yqs/UTM-Docs-Chinese/main/assets/BlueScreen1.jpeg
+  [10]: https://utmapp.wiki/assets/BlueScreen1.jpeg
