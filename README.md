@@ -338,7 +338,7 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 ## windows虚拟机蓝屏，信息如下图
 
-![BlueScreen](10)
+![BlueScreen][10]
 
 修改CPU类型为`Standard PC (i440FX + PIIX, 1996)(defult)(pc-i440fx-5.2)`
 
