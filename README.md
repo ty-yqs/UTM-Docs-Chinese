@@ -340,7 +340,7 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 ![BlueScreen][10]
 
-修改CPU类型为`Standard PC (i440FX + PIIX, 1996)(defult)(pc-i440fx-5.2)`
+修改系统类型为`Standard PC (i440FX + PIIX, 1996)(defult)(pc-i440fx-5.2)`
 
   [1]: https://github.com/utmapp/UTM/releases/latest
   [2]: https://dantheman827.github.io/ios-app-signer/
