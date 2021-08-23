@@ -252,7 +252,7 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 需要[SPICE WebDAV 服务](https://www.spice-space.org/download.html)。请注意，`SPICE`对`Windows XP`的支持并不完美，建议使用`Windows 7`来运行`WebDAV`。您可以共享UTM的`Documents`目录中的任何目录，但不包括任何`.utm`包。
 
-具体操作见[@Js-John的b站视频](https://b23.tv/JfgLcI)
+具体操作见[@ty-yqs的b站视频](https://b23.tv/UOUnME)
 
 # 虚拟机
 
