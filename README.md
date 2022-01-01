@@ -250,7 +250,31 @@ QEMU不仅仅模拟CPU，它还模拟整个系统。这允许您选择一个QEMU
 
 ### 目录共享
 
-需要[SPICE WebDAV 服务](https://www.spice-space.org/download.html)。请注意，`SPICE`对`Windows XP`的支持并不完美，建议使用`Windows 7`来运行`WebDAV`。您可以共享UTM的`Documents`目录中的任何目录，但不包括任何`.utm`包。
+Windows XP只允许在80端口上映射webdav网络驱动器。这是一个问题，因为SPICE webdav服务在9843端口上运行。
+
+要在Windows XP内成功映射共享文件夹，请按照以下步骤操作：
+
+1. 从[此处](https://www.spice-space.org/download/windows/spice-webdavd/)下载SPICE webdav daemon v2.2（新版本在XP上不起作用）。注意下载适用于架构的正确版本（x86与x64）
+2. 安装软件包，重新启动虚拟机
+3. 打开服务 (运行 `services.msc`) 并停止和禁用“Spice webdav代理”服务
+4. 建立一个名为 `service.bat` 的文件并包含以下一行，并将其复制到 `C:\Program Files\SPICE webdavd\` 目录:
+
+`"C:\Program Files\SPICE webdavd\bin\spice-webdavd.exe" -p 80 --no-service`
+
+5. 建立一个名为 `invisible.vbs` 的文件并包含以下一行，并将其复制到 `C:\Program Files\SPICE webdavd\` 目录:
+
+`CreateObject("Wscript.Shell").Run """" & WScript.Arguments(0) & """", 0, False`
+
+6. 创建新快捷方式（右键单击任何文件夹中的空白区域并前往“新建->快捷方式”。将以下粘贴到位置框内:
+
+`wscript.exe "C:\Program Files\SPICE webdavd\invisible.vbs" "C:\Program Files\SPICE webdavd\service.bat"`
+
+7. 将新创建的快捷方式移动到启动文件夹（通过导航到Windows资源管理器中的`shell:startup`）
+8. Shut the VM down
+9. 在UTM中打开虚拟机的配置，然后转到共享->启用目录共享。单击路径并创建一个文件夹，例如`WebDAV`
+10. 打开“文件”应用程序，然后转到“我的iPad上->“UTM”->“WebDAV”->“创建一个新文件夹”, 例如`Shared`. 或者，将图片复制到新文件夹.
+11. 再次启动虚拟机，并在网页浏览器中打开以下URL[http://localhost:80/**Shared**](http://localhost:80/Shared)。您应该会看到一个目录列表，其中包含您在上一步复制到文件夹中的测试文件。请注意，我们使用子文件夹的名称，而不是您在VM配置中选择的文件夹的名称.
+12. 此时，您应该能够使用相同的URL在“我的电脑”中映射网络驱动器
 
 具体操作见[@ty-yqs的b站视频](https://b23.tv/UOUnME)
 
